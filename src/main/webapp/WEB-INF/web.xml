@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?> <!--QUESTO è IL DOCTYPE DEL FILE XML-->
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+id="WebApp_ID" version="4.0">
+
+	<display-name>NoteDbConnection</display-name>
+
+<!-- tutte le altre configurazioni possono essere inserite qui -->
+<!-- AGGIUNGO LA SERVLET DI AddNoteServlet E IL MAPPING DELLA SERVLET PER POTERLA UTILIZZARE CORRETTAMENTE --> 
+
+
+	<servlet>
+        <servlet-name>AddNoteServlet</servlet-name>
+        <servlet-class>com.example.servlet.AddNoteServlet</servlet-class>
+    </servlet>
+    
+ <!-- sotto create il  tag servlet-mapping dove passare  il nome e l’url che utilizzerà la  servlet -->
+
+    <servlet-mapping>
+        <servlet-name>AddNoteServlet</servlet-name>
+        <url-pattern>/addNote</url-pattern>
+    </servlet-mapping>
+
+<!-- AGGIUNGO LA SERVLET DI DeleteNoteServlet E IL MAPPING DELLA SERVLET PER POTERLA UTILIZZARE CORRETTAMENTE --> 
+<servlet>
+        <servlet-name>DeleteNoteServlet</servlet-name>
+        <servlet-class>com.example.servlet.DeleteNoteServlet</servlet-class>
+    </servlet>
+    
+ <!-- sotto create il  tag servlet-mapping dove passare  il nome e l’url che utilizzerà la  servlet -->
+
+    <servlet-mapping>
+        <servlet-name>DeleteNoteServlet</servlet-name>
+        <url-pattern>/deleteNote</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+        <servlet-name>EditNoteServlet</servlet-name>
+        <servlet-class>com.example.servlet.EditNoteServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>EditNoteServlet</servlet-name>
+        <url-pattern>/editNote</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+        <servlet-name>UpdateNoteServlet</servlet-name>
+        <servlet-class>com.example.servlet.UpdateNoteServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>UpdateNoteServlet</servlet-name>
+        <url-pattern>/updateNote</url-pattern>
+    </servlet-mapping>
+
+
+  <welcome-file-list> 
+	<welcome-file>index.html</welcome-file>
+	<welcome-file>index.jsp</welcome-file>
+	<welcome-file>index.htm</welcome-file>
+	<welcome-file>default.html</welcome-file>
+	<welcome-file>default.jsp</welcome-file>
+	<welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+</web-app>
